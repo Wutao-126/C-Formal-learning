@@ -103,24 +103,24 @@
 //}
 
 
-#include<ctype.h>
-void Count(char *p[3])
+
+void Count(char* p)
 {
 	int i = 0;
-	for (i = 0; i < 3; i++)
+	for (i = 0; i < 5; i++)
 	{
-		int j = 0;
-		for (j = 0; j < 5; j++)
-		{
-			printf("%c ", p[i][j]);
-		}
-		printf("\n");
-		
+			printf("%c ", *(p+i));
 	}
+	printf("\n");
 }
 int main()
 {
 	char str[3][5] = { "123","abc","12ab" };
-	 Count(str);
+	int i = 0;
+	for (i = 0; i < 3; i++)
+	{
+		Count(str+i);
+	}
+	 
 	return 0;
 }

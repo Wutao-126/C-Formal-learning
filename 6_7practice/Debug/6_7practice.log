@@ -1,4 +1,4 @@
 ﻿  test.c
-E:\Code(githup)\C-Formal-learning\6_7practice\test.c(124,12): warning C4047: “函数”:“char **”与“char [3][5]”的间接级别不同
-E:\Code(githup)\C-Formal-learning\6_7practice\test.c(124,9): warning C4024: “Count”: 形参和实参 1 的类型不同
+E:\Code(githup)\C-Formal-learning\6_7practice\test.c(122,14): warning C4047: “函数”:“char *”与“char (*)[5]”的间接级别不同
+E:\Code(githup)\C-Formal-learning\6_7practice\test.c(122,12): warning C4024: “Count”: 形参和实参 1 的类型不同
   6_7practice.vcxproj -> E:\Code(githup)\C-Formal-learning\6_7practice\Debug\6_7practice.exe
