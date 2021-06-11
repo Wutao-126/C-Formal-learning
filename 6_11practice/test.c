@@ -466,3 +466,15 @@
 //    }
 //    return 0;
 //}
+
+int main()
+{
+	int a[10] = { 0 * 10 };
+	//int arr[10] = { 0,1,2,3,4,5,6,7,8,9 };
+	int i = 0;
+	for (i = 0; i < 10; i++)
+	{
+		printf("%d\\\bsads", a[i]);
+	}
+	return 0;
+}
