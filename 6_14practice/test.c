@@ -171,30 +171,42 @@
 //}
 
 
+//#include<stdio.h>
+//int main()
+//{
+//    int n = 0;
+//    int m = 0;
+//    scanf("%d%d", &n, &m);
+//    int arr1[100] = { 0 };
+//    int arr2[10][10] = { 0 };
+//    int i = 0;
+//    int j = 0;
+//    int k = 0;
+//    for (i = 0; i < m * n; i++)
+//    {
+//        scanf("%d", &arr1[i]);
+//    }
+//    for (i = 0; i < n; i++)
+//    {
+//        for (j = 0; j < m; j++)
+//        {
+//            arr2[i][j] = arr1[k];
+//            k++;
+//            printf("%d", arr2[i][j]);
+//        }
+//        printf("\n");
+//    }
+//    return 0;
+//}
+
 #include<stdio.h>
 int main()
 {
-    int n = 0;
-    int m = 0;
-    scanf("%d%d", &n, &m);
-    int arr1[100] = { 0 };
-    int arr2[10][10] = { 0 };
-    int i = 0;
-    int j = 0;
-    int k = 0;
-    for (i = 0; i < m * n; i++)
-    {
-        scanf("%d", &arr1[i]);
-    }
-    for (i = 0; i < n; i++)
-    {
-        for (j = 0; j < m; j++)
-        {
-            arr2[i][j] = arr1[k];
-            k++;
-            printf("%d", arr2[i][j]);
-        }
-        printf("\n");
-    }
-    return 0;
+	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	int i = 4;
+	printf("%d\n", arr[arr[i]]);
+	//char str[10];
+	//*str = "abcdefg";
+	//printf("%s", str);
+	return 0;
 }
