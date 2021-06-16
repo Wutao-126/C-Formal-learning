@@ -1,0 +1,4 @@
+﻿  test.c
+E:\Code(githup)\C-Formal-learning\6_16practice\test.c(171,28): warning C4098: “cmp_int”:“void”函数返回值
+E:\Code(githup)\C-Formal-learning\6_16practice\test.c(188,27): warning C4133: “函数”: 从“void (__cdecl *)(const void *,const void *)”到“_CoreCrtNonSecureSearchSortCompareFunction”的类型不兼容
+  6_16practice.vcxproj -> E:\Code(githup)\C-Formal-learning\6_16practice\Debug\6_16practice.exe
