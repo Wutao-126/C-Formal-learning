@@ -24,12 +24,31 @@ void TestSeqList()
 	SeqListPopFrant(&s);
 
     SeqListPrint(&s);
+
+	SeqListinsert(&s, 1, 0);
+	SeqListinsert(&s, 3, 0);
+	SeqListPrint(&s);
+
+	SeqListErase(&s, 1);
+	SeqListErase(&s, 2);
+	SeqListPrint(&s);
+
+	SeqListDelete(&s, 5);
+	SeqListPrint(&s);
+
+	SeqListDestory(&s);
+
 }
 int main()
 {
 	TestSeqList();
 	return 0;
 }
+
+
+
+
+
 
 
 
