@@ -2,6 +2,7 @@
 
 #include<stdio.h>
 #include<stdlib.h>
+#include<assert.h>
 
 typedef int SListDataType;
 //½áµã
@@ -21,3 +22,9 @@ void SListPopFrant(SListNode** pphead);
 
 void SListPrint(SListNode* phead);
 int SListSize(SListNode* phead);
+
+SListNode* SListFind(SListNode* phead, SListDataType x);
+
+//void SListPushMid(SListNode** pphead, SListDataType x, SListDataType y);
+void SListInsertAfter(SListNode* pos, SListDataType x);
+void SListEraseAfter(SListNode* pos, SListDataType x);

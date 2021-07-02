@@ -12,26 +12,41 @@ int main()
 
 	SListPrint(pList);
 
-	SListPopBack(&pList);
-	SListPopBack(&pList);
-	SListPopBack(&pList);
-	SListPopBack(&pList);
-	SListPopBack(&pList);
+	//SListPopBack(&pList);
+	//SListPopBack(&pList);
+	//SListPopBack(&pList);
+	//SListPopBack(&pList);
+	//SListPopBack(&pList);
 
+	//SListPrint(pList);
+
+	//SListPushFront(&pList, 4);
+	//SListPushFront(&pList, 3);
+	//SListPushFront(&pList, 2);
+	//SListPushFront(&pList, 1);
+
+	//SListPrint(pList);
+
+	//SListPopFrant(&pList);
+	//SListPopFrant(&pList);
+	//SListPopFrant(&pList);
+	//SListPopFrant(&pList);
+
+	//SListPrint(pList);
+
+	SListNode*pos= SListFind(pList,3);
+	if (pos)
+	{
+		pos->data = 30;
+	}
 	SListPrint(pList);
 
-	SListPushFront(&pList, 4);
-	SListPushFront(&pList, 3);
-	SListPushFront(&pList, 2);
-	SListPushFront(&pList, 1);
-
+	//SListPushMid(&pList, 30,20);
+	//SListPrint(pList);
+	SListInsertAfter(SListFind(pList, 30), 20);
 	SListPrint(pList);
 
-	SListPopFrant(&pList);
-	SListPopFrant(&pList);
-	SListPopFrant(&pList);
-	SListPopFrant(&pList);
-
+	SListEraseAfter(SListFind(pList, 2), 2);
 	SListPrint(pList);
 	return 0;
 }
