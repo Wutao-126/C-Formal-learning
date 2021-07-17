@@ -40,11 +40,63 @@ void Test2()
 
 }
 
+
+
+
+bool isValid(char* s) {
+    Stack st;
+    StackInit(&st);
+    while (*s != '\0')
+    {
+        switch (*s)
+        {
+        case '[':
+        case '{':
+        case '(':
+        {
+
+            StackPush(&st, *s);
+            s++;
+            break;
+        }
+        case ']':
+        case '}':
+        case ')':
+        {
+            if (StackEmpty(&st))
+            {
+                StackDestory(&st);
+                return false;
+            }
+            char top = StackTop(&st);
+            StackPop(&st);
+            if ((*s == ']' && top != '[')
+                || (*s == '}' && top != '{')
+                || (*s == ')' && top != '('))
+            {
+                StackDestory(&st);
+                return false;
+            }
+            else
+            {
+                s++;
+            }
+            break;
+        }
+        default:
+            break;
+        }
+    }
+    bool ret = StackEmpty(&st);
+    StackDestory(&st);
+    return ret;
+}
 int main()
 {
 	//Test1();
-	Test2();
-
+	//Test2();
+    char* str = "({{{{}}}))";
+    bool ret = isValid(str);
 	return 0;
 }
 

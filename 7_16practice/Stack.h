@@ -4,7 +4,7 @@
 #include<stdbool.h>
 #include<stdlib.h>
 
-typedef int STDataType;
+typedef char STDataType;
 typedef struct Stack Stack;
 struct Stack
 {
