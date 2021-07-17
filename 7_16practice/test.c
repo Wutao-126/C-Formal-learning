@@ -1,16 +1,17 @@
 #include"Stack.h"
+#include"Queue.h"
 
 
-int main()
+void Test1()
 {
 	Stack st;
 	StackInit(&st);
 
-	StackPush(&st,1);
-	StackPush(&st,2);
-	StackPush(&st,3);
-	StackPush(&st,4);
-	StackPush(&st,5);
+	StackPush(&st, 1);
+	StackPush(&st, 2);
+	StackPush(&st, 3);
+	StackPush(&st, 4);
+	StackPush(&st, 5);
 	while (!StackEmpty(&st))
 	{
 		printf("%d ", StackTop(&st));
@@ -19,7 +20,30 @@ int main()
 	printf("\n");
 
 	StackDestory(&st);
+}
 
+
+void Test2()
+{
+	Queue pq;
+	QueueInit(&pq);
+	QueuePush(&pq, 1);
+	QueuePush(&pq, 2);
+	QueuePush(&pq, 3);
+	QueuePush(&pq, 4);
+	QueuePush(&pq, 5);
+	printf("%d\n", QueueFront(&pq));
+	printf("%d\n", QueueBack(&pq));
+	printf("%d\n", QueueSize(&pq));
+	printf("%d\n", QueueEmpty(&pq));
+	QueuePrint(&pq);
+
+}
+
+int main()
+{
+	//Test1();
+	Test2();
 
 	return 0;
 }
