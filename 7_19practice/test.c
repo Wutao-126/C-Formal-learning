@@ -48,6 +48,11 @@ void PostOrder(BTNode* root)
 	printf("%c ", root->data);
 }
 
+int TreeSize(BTNode* root)
+{
+	return root == NULL ? 0 : TreeSize(root->left) + TreeSize(root->right) + 1;
+}
+
 int main()
 {
 	BTNode* A = (BTNode*)malloc(sizeof(BTNode));
@@ -79,8 +84,14 @@ int main()
 	B->right = E;
 	A->right = C;
 	PrevOrder(A);
+	printf("\n");
 	InOrder(A);
+	printf("\n");
+
 	PostOrder(A);
+	printf("\n");
+
+	printf("%d\n", TreeSize(A));
 	return 0;
 }
 
