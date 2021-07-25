@@ -1,5 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include"Queue.h"
+
 
 typedef char BTDataType;
 typedef struct BinaryTreeNode
@@ -8,6 +10,7 @@ typedef struct BinaryTreeNode
 	struct BinaryTreeNode* right;
 	BTDataType data;
 }BTNode;
+
 
 //前序
 void PrevOrder(BTNode* root)
@@ -48,9 +51,52 @@ void PostOrder(BTNode* root)
 	printf("%c ", root->data);
 }
 
+//结点个数
 int TreeSize(BTNode* root)
 {
 	return root == NULL ? 0 : TreeSize(root->left) + TreeSize(root->right) + 1;
+}
+
+//叶子结点个数
+int TreeLeafSize(BTNode* root)
+{
+	if (root == NULL)
+	{
+		return 0;
+	}
+	if (root->left|| root->right)
+	{
+		return TreeLeafSize(root->left) + TreeLeafSize(root->right);
+	}
+	return 1;
+	
+}
+
+//层序遍历
+void LevelOrder(BTNode* root)
+{
+	Queue q;
+	QueueInit(&q);
+	if (root)
+	{
+		QueuePush(&q, root);
+	}
+	while (!QueueEmpty(&q))
+	{
+		BTNode* front = QueueFront(&q);
+		QueuePop(&q);
+		printf("%c ", front->data);
+		if (front->left)
+		{
+			QueuePush(&q, front->left);
+		}
+		if (front->right)
+		{
+			QueuePush(&q, front->right);
+		}
+	}
+	printf("\n");
+	QueueDestory(&q);
 }
 
 int main()
@@ -92,6 +138,9 @@ int main()
 	printf("\n");
 
 	printf("%d\n", TreeSize(A));
+	printf("%d\n", TreeLeafSize(A));
+
+	LevelOrder(A);
 	return 0;
 }
 
