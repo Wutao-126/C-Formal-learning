@@ -46,11 +46,12 @@ void PlayerMove(char board[][COL], int row, int col)
 {
 	int x = 0;
 	int y = 0;
-	printf("玩家走>\n");
-	printf("请输入坐标>");
-	scanf("%d%d", &x, &y);
+	
 	while (1)
 	{
+		printf("玩家走>\n");
+		printf("请输入坐标>");
+		scanf("%d%d", &x, &y);
 		if (x >= 1 && x <= row && y >= 1 && y <= col)
 		{
 			if (board[x - 1][y - 1] == ' ')
@@ -61,9 +62,6 @@ void PlayerMove(char board[][COL], int row, int col)
 			else
 			{
 				printf("坐标被占用，请重新输入\n");
-				printf("玩家走>\n");
-				printf("请输入坐标>");
-				scanf("%d%d", &x, &y);
 			}
 		}
 		else
@@ -95,73 +93,32 @@ void ComputerMove(char board[][COL], int row, int col)
 char IsWin(char board[][COL], int row, int col)
 {
 	int i = 0;
-	int j = 0;
 	for (i = 0; i < row; i++)
 	{
-		
-		int countp = 0;
-		int countc = 0;
-		for (j = 0; j < col; j++)
+		if (board[i][0] == board[i][1] && board[i][1] == board[i][2] && board[i][0] != ' ')
 		{
-			if (board[i][j] == ' ')
-				break;
-			if (board[i][j] == '*')
-				countp++;
-			if (board[i][j] == '#')
-				countc++;
-			if (countp == 3)
-				return '*';
-			if (countc == 3)
-				return '#';
+			return board[i][0];
 		}
+	}
+	for (i = 0; i < col; i++)
+	{
+		if (board[0][i] == board[1][i] && board[1][i] == board[2][i] && board[0][i] != ' ')
+		{
+			return board[0][i];
+		}
+	}
+	if (board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[0][0] != ' ')
+	{
+		return board[0][0];
+	}
+	if (board[0][2] == board[1][1] && board[1][1] == board[2][0] && board[0][2] != ' ')
+	{
+		return board[0][2];
+	}
 
-	}
-	for (j = 0; j < col; j++)
-	{
-		int countp = 0;
-		int countc = 0;
-		for (i = 0; i < row; i++)
-		{
-			if (board[i][j] == ' ')
-				break;
-			if (board[i][j] == '*')
-				countp++;
-			if (board[i][j] == '#')
-				countc++;
-			if (countp == 3)
-				return '*';
-			if (countc == 3)
-				return '#';
-		}
-	}
-	int countp = 0;
-	int countc = 0;
-	for (i = 0; i < row; i++)
-	{
-		if (board[i][i] == '*')
-			countp++;
-		if (board[i][i] == '#')
-			countc++;
-		if (countp == 3)
-			return '*';
-		if (countc == 3)
-			return '#';
-	}
-    countp = 0;
-	countc = 0;
-	for (i = 0,j = row-1; i < row&&j >= 0; i++,j--)
-	{
-		if (board[i][j] == '*')
-			countp++;
-		if (board[i][j] == '#')
-			countc++;
-		if (countp == 3)
-			return '*';
-		if (countc == 3)
-			return '#';
-	}
 	for (i = 0; i < row ; i++)
 	{
+		int j = 0;
 		for (j = 0; j < col; j++)
 		{
 			if (board[i][j] == ' ')
