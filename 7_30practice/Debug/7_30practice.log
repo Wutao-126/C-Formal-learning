@@ -1,0 +1,4 @@
+﻿  test.c
+E:\Code(githup)\C-Formal-learning\7_30practice\test.c(118,5): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Code(githup)\C-Formal-learning\7_30practice\test.c(126,13): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  7_30practice.vcxproj -> E:\Code(githup)\C-Formal-learning\7_30practice\Debug\7_30practice.exe
