@@ -3,13 +3,14 @@
 
 void menu()
 {
-	printf("******************************\n");
-	printf("***********1.play*************\n");
-	printf("***********0.exit*************\n");
-
+	printf("********************************************\n");
+	printf("***********1.Player VS Computer*************\n");
+	printf("***********2.Player VS Player***************\n");
+	printf("*******************0.exit*******************\n");
+	printf("********************************************\n");
 }
 
-void game()
+void gamePvC()
 {
 	//棋盘数组
 	char board[ROW][COL];
@@ -38,15 +39,21 @@ void game()
 	}
 	if (ret == '*')
 	{
+		printf("--------------------------\n");
 		printf("玩家赢\n");
+		printf("--------------------------\n");
 	}
 	else if (ret == '#')
 	{
+		printf("--------------------------\n");
 		printf("电脑赢\n");
+		printf("--------------------------\n");
 	}
 	else
 	{
+		printf("--------------------------\n");
 		printf("平局\n");
+		printf("--------------------------\n");
 	}
 }
 
@@ -62,8 +69,12 @@ int main()
 		switch (input)
 		{
 		case 1:
-			printf("开始游戏\n");
-			game();
+			printf("Player VS Computer\n");
+			gamePvC();
+			break;
+		case 2:
+			printf("Player VS Player\n");
+			//gamePvP();
 			break;
 		case 0:
 			printf("退出游戏\n");

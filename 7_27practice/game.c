@@ -1,6 +1,6 @@
 #include"game.h"
 
-void InitBoard(char board[][COL], int row, int col)
+void InitBoard(char board[ROW][COL], int row, int col)
 {
 	int i = 0;
 	for (i = 0; i < row; i++)
@@ -14,7 +14,7 @@ void InitBoard(char board[][COL], int row, int col)
 }
 
 
-void PrintBoard(char board[][COL], int row, int col)
+void PrintBoard(char board[ROW][COL], int row, int col)
 {
 
 	int i = 0;
@@ -42,7 +42,7 @@ void PrintBoard(char board[][COL], int row, int col)
 }
 
 
-void PlayerMove(char board[][COL], int row, int col)
+void PlayerMove(char board[ROW][COL], int row, int col)
 {
 	int x = 0;
 	int y = 0;
@@ -72,7 +72,7 @@ void PlayerMove(char board[][COL], int row, int col)
 }
 
 
-void ComputerMove(char board[][COL], int row, int col)
+void ComputerMove(char board[ROW][COL], int row, int col)
 {
 	int x = 0;
 	int y = 0;
@@ -90,7 +90,7 @@ void ComputerMove(char board[][COL], int row, int col)
 }
 
 
-char IsWin(char board[][COL], int row, int col)
+char IsWin(char board[ROW][COL], int row, int col)
 {
 	int i = 0;
 	for (i = 0; i < row; i++)

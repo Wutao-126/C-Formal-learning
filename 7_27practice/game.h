@@ -9,12 +9,12 @@
 #define COL 3
 
 
-void InitBoard(char board[][COL],int row,int col);
+void InitBoard(char board[ROW][COL],int row,int col);
 
-void PrintBoard(char board[][COL], int row, int col);
+void PrintBoard(char board[ROW][COL], int row, int col);
 
-void PlayerMove(char board[][COL], int row, int col);
+void PlayerMove(char board[ROW][COL], int row, int col);
 
-void ComputerMove(char board[][COL], int row, int col);
+void ComputerMove(char board[ROW][COL], int row, int col);
 
-char IsWin(char board[][COL], int row, int col);
+char IsWin(char board[ROW][COL], int row, int col);
