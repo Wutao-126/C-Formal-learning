@@ -1,1 +1,1 @@
-E:\Code(githup)\C-Formal-learning\7_28practice\Debug\7_28practice.exe
+E:\Code(githup)\C-Formal-learning\7_28practice\Debug\扫雷.exe

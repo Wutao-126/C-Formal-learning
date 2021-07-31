@@ -17,7 +17,7 @@ void InitBoard(char board[ROWS][COLS], int rows, int cols,char set)
 void DisplayBoard(char board[ROWS][COLS], int row, int col)
 {
 	int i = 0;
-	for (i = 0; i <= 9; i++)
+	for (i = 0; i <= col; i++)
 	{
 		printf("%d ", i);
 	}
@@ -32,6 +32,7 @@ void DisplayBoard(char board[ROWS][COLS], int row, int col)
 		}
 		printf("\n");
 	}
+	printf("\n");
 }
 
 void SetMine(char board[ROWS][COLS], int row, int col)

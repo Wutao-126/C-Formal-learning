@@ -25,7 +25,7 @@ void game()
 
 	//布置雷
 	SetMine(mine, ROW, COL);
-  DisplayBoard(mine, ROW, COL);
+    //DisplayBoard(mine, ROW, COL);
 
 	//排雷
 	FindMine(mine, show, ROW, COL);

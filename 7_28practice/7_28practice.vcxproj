@@ -24,6 +24,7 @@
     <ProjectGuid>{5d7ac6da-da74-46f6-afd2-6ceb90177b49}</ProjectGuid>
     <RootNamespace>My728practice</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>扫雷</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

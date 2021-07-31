@@ -1,2 +1,4 @@
-﻿  test.c
-  7_28practice.vcxproj -> E:\Code(githup)\C-Formal-learning\7_28practice\Debug\7_28practice.exe
+﻿E:\VS2019\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: 中间目录(Debug\)包含从另一个项目(7_28practice.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
+  test.c
+E:\Code(githup)\C-Formal-learning\7_28practice\test.c(43,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  7_28practice.vcxproj -> E:\Code(githup)\C-Formal-learning\7_28practice\Debug\扫雷.exe
