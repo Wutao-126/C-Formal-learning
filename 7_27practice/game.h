@@ -5,8 +5,8 @@
 #include<stdlib.h>
 
 
-#define ROW 3
-#define COL 3
+#define ROW 9
+#define COL 9
 
 
 void InitBoard(char board[ROW][COL],int row,int col);
