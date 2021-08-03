@@ -1,0 +1,3 @@
+﻿  test.c
+E:\Code(githup)\C-Formal-learning\8_3practice\test.c(91): warning C4172: 返回局部变量或临时变量的地址: a
+  8_3practice.vcxproj -> E:\Code(githup)\C-Formal-learning\8_3practice\Debug\8_3practice.exe
