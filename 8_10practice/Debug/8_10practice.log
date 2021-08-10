@@ -1,0 +1,4 @@
+﻿  test.c
+E:\Code(githup)\C-Formal-learning\8_10practice\test.c(41,2): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Code(githup)\C-Formal-learning\8_10practice\test.c(56,6): warning C4013: “gets”未定义；假设外部返回 int
+  8_10practice.vcxproj -> E:\Code(githup)\C-Formal-learning\8_10practice\Debug\8_10practice.exe
